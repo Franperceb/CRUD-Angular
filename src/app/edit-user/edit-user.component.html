@@ -1,0 +1,33 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Edit User</h2>
+
+    <button routerLink="/" class="btn btn-success" >Go back</button>
+
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+      <div class="hidden">
+        <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input formControlName="name" placeholder="name" name="name" class="form-control" id="name">
+      </div>
+  
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" readonly="true">
+      </div>
+  
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="string" formControlName="phone" placeholder="phone" name="phone" class="form-control" id="phone">
+      </div>
+  
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input formControlName="website" placeholder="website" name="website" class="form-control" id="website">
+      </div>
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>

@@ -1,0 +1,32 @@
+
+  <div class="col-md-6 user-container " style="width: 70%;">
+    <h2 style="margin: auto"> Users</h2>
+
+    <div  *ngIf="userList">
+      <p> Search by: </p><input type="text" placeholder="username" [(ngModel)]="searchName" > 
+    </div>
+
+    <table class="table table-striped"  >
+      <thead>
+      <tr>
+        <th class="hidden">#</th>
+        <th>Username</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of userList | filter:searchName ">
+        <td class="hidden"></td>
+        <td>{{user.username}}</td>
+        <td>{{user.id}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><button  class="btn btn-success" (click)="getUser(user.id)"> View Details</button>
+          <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button>
+          <button class="btn btn-success" (click)="deleteUser(user)" style="margin-left: 20px;"> Delete</button></td>
+      </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-danger" style="width:100px" (click)="addUser()" > Add User</button>
+
+  </div>

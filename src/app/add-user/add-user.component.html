@@ -1,0 +1,30 @@
+<div class="col-md-6 user-container">
+    <h2 class="text-center">Add User</h2>
+    <button routerLink="/" class="btn btn-success" >Go back</button>
+
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+         <label for="name">Name:</label>
+         <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name">
+     </div>
+
+      <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username">
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="string" formControlName="phone" placeholder="phone" name="salary" class="form-control" id="phone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" formControlName="email" placeholder="email" name="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input formControlName="website" placeholder="website" name="website" class="form-control" id="website">
+      </div>
+      <button class="btn btn-danger">Add</button>
+    </form>
+  </div>
